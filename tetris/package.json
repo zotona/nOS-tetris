@@ -1,0 +1,54 @@
+{
+  "name": "tetris",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@nosplatform/api-functions": "^0.2.2",
+    "axios": "^0.18.0",
+    "final-form": "^4.6.1",
+    "lodash.merge": "^4.6.1",
+    "polished": "^1.9.2",
+    "ramda": "^0.25.0",
+    "react": "^16.4.0",
+    "react-devtools": "^3.2.1",
+    "react-dom": "^16.4.0",
+    "react-final-form": "^3.4.2",
+    "react-loadable": "^5.3.1",
+    "react-modal": "^3.4.4",
+    "react-scripts": "1.1.1",
+    "react-virtualized": "^9.18.5",
+    "recompose": "^0.26.0",
+    "reflexer": "^1.0.0",
+    "reselect": "^3.0.1",
+    "styled-components": "^3.2.3",
+    "styled-transition-group-animation": "^2.0.0",
+    "uuid": "^3.2.1"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "prepare-for-commit":
+      "prettier --write \"src/**/*.js\" \"src/**/*.css\" \"config/**/*.js\" \"protractor_e2e/**/*.js\" package.json && eslint --fix \"src/**/*.js\" \"protractor_e2e/**/*.js\" ",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.4.0",
+    "@storybook/addon-knobs": "^3.4.0",
+    "@storybook/cli": "^3.4.0",
+    "@storybook/react": "^3.4.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-react-native": "^3.2.1",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.3.0",
+    "flow-bin": "^0.68.0",
+    "flow-typed": "^2.4.0",
+    "prettier": "^1.11.1",
+    "react-storybook-addon-props-combinations": "^1.0.1",
+    "stylelint": "^9.1.3",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.3.1"
+  }
+}

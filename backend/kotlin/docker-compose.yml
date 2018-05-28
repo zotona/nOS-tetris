@@ -1,0 +1,21 @@
+version: '3'
+services:
+  maven:
+    image: maven:3.5-alpine
+    volumes:
+      - .mvn-home:/root/.m2
+      - .:/usr/src/project
+    working_dir: /usr/src/project
+  neoj:
+    image: coz/neoj-compiler
+    volumes:
+      - ${PWD}/vendor/org.neo.smartcontract.framework.jar:/usr/share/dotnet/org.neo.smartcontract.framework.jar:ro
+      - ./target/classes/contracts:/dotnetapp/classes
+      - ./target/avms:/dotnetapp/out
+      - ./scripts:/dotnetapp/scripts
+  neo-devpack-java:
+    image: maven:3.5-alpine
+    volumes:
+        - .mvn-home:/root/.m2
+        - ./vendor/neo-devpack-java:/usr/src/project
+    working_dir: /usr/src/project

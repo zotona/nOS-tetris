@@ -1,0 +1,14 @@
+
+[untyped]
+#<PROJECT_ROOT>/node_modules/jss/.*
+<PROJECT_ROOT>node_modules/styled-components/.*
+
+[include]
+[libs]
+# local/custom libdefs
+./flow
+
+[lints]
+
+[options]
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
