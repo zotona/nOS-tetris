@@ -13,7 +13,7 @@ const key = "score";
 //export const apiSaveHighScore = (name: string, score: number) =>
 //Promise.resolve();
 
- export const apiGetTopScores = () => JSON.parse(Base64.decode(API.getStorage({ scriptHash, key })));
+ export const apiGetTopScores = () => API.getStorage({ scriptHash, key });
 
  export const apiSaveHighScore = (name: string, score: number) => {   
    API.invoke({
