@@ -2,10 +2,12 @@
   "name": "tetris",
   "version": "0.1.0",
   "private": true,
+  "homepage": " https://zotona.github.io/nOS-tetris-pages",
   "dependencies": {
     "@nosplatform/api-functions": "^0.2.2",
     "axios": "^0.18.0",
     "final-form": "^4.6.1",
+    "js-base64": "^2.4.5",
     "lodash.merge": "^4.6.1",
     "polished": "^1.9.2",
     "ramda": "^0.25.0",
@@ -26,12 +28,13 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "prepare-for-commit":
-      "prettier --write \"src/**/*.js\" \"src/**/*.css\" \"config/**/*.js\" \"protractor_e2e/**/*.js\" package.json && eslint --fix \"src/**/*.js\" \"protractor_e2e/**/*.js\" ",
+    "prepare-for-commit": "prettier --write \"src/**/*.js\" \"src/**/*.css\" \"config/**/*.js\" \"protractor_e2e/**/*.js\" package.json && eslint --fix \"src/**/*.js\" \"protractor_e2e/**/*.js\" ",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.0",
@@ -44,6 +47,7 @@
     "eslint-plugin-sort-imports-es6-autofix": "^0.3.0",
     "flow-bin": "^0.68.0",
     "flow-typed": "^2.4.0",
+    "gh-pages": "^1.2.0",
     "prettier": "^1.11.1",
     "react-storybook-addon-props-combinations": "^1.0.1",
     "stylelint": "^9.1.3",
